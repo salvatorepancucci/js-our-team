@@ -26,3 +26,12 @@ const teamMembers = [
 teamMembers.forEach(member => {
     console.log(`Nome: ${member.nome}, Ruolo: ${member.ruolo}, Foto: ${member.foto}`);
 });
+
+// MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
+const teamContainer = document.getElementById('team-container');
+
+teamMembers.forEach(member => {
+    const memberInfo = document.createElement('div');
+    memberInfo.textContent = `Nome: ${member.nome}, Ruolo: ${member.ruolo}, Foto: ${member.foto}`;
+    teamContainer.appendChild(memberInfo);
+});
